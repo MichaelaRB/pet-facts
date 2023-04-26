@@ -1,10 +1,9 @@
-# song-search
-An application that allows the user to search for information about a song and display the lyrics of the song if available.
+# Pet Facts
+An application that allows the user to generate a random image and fact of either a cat or dog.
 
 ## User Story
 
-```
-AS A music enthusiast
-I WANT to be able to look up my favorite songs
-SO THAT I can find information about them and be able to read the lyrics.
+``AS A pet owner
+I WANT to be able to look up fun facts about my favorite pet
+SO THAT I can learn more about them
 ```
