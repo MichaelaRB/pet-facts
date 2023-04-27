@@ -1,13 +1,15 @@
 
-var catUrl = "https://meowfacts.herokuapp.com/";
+var catFactUrl = "https://meowfacts.herokuapp.com/";
 var dogImgUrl = "https://random.dog/woof.json";
 var dogTestUrl = "https://dogapi.dog/api/v2/facts";
+var catTestUrl = "https://shibe.online/api/cats?count=1&urls=true&httpsUrls=false";
 var catFact = "";
-var dogImg = "";
+var dogFact = "";
+var catImgUrl;
 
 
 
-fetch(catUrl)
+fetch(catFactUrl)
     .then(function (response) {
         return response.json();
     })
@@ -19,25 +21,31 @@ fetch(dogImgUrl)
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
-        dogImg = data.url;
-        console.log(data.url);
+        dogUrl = data.url;
     });
 fetch(dogTestUrl)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
+        dogFact = data.data[0].attributes.body;
     });
-var width = Math.floor(Math.random() * 700) + 400;
-var height = Math.floor(Math.random() * 700) + 400;
-var catUrl = "http://placekitten.com/" + width + "/" + height;
+fetch(catTestUrl)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        catImgUrl = String(data[0]);
+    });
 
 setTimeout(() => {
-    var catImg = document.getElementById("cat");
+    var catImg = document.getElementById("catImg");
     var catEl = document.getElementById("catFact");
-    catImg.setAttribute("src",catUrl);
+    var dogImg = document.getElementById("dogImg");
+    var dogEl = document.getElementById("dogFact");
+    catImg.setAttribute("src",catImgUrl);
     catEl.textContent = catFact;
+    dogImg.setAttribute("src",dogUrl);
+    dogEl.textContent = dogFact;
     
-}, 200); 
+}, 500); 
