@@ -24,8 +24,8 @@ fetch(catImgUrl)
     });
 
 setTimeout(() => {
-        var imgEl = document.getElementById("catImg");
-        var catEl = document.getElementById("catFact");
+        var imgEl = document.getElementById("petImg");
+        var catEl = document.getElementById("petFact");
     
         imgEl.setAttribute("src",imgUrl);
         catEl.textContent = catFact;
@@ -49,9 +49,13 @@ fetch(dogFactUrl)
     });
 
 setTimeout(() => {
-    var imgEl = document.getElementById("dogImg");
-    var dogEl = document.getElementById("dogFact");
+    var imgEl = document.getElementById("petImg");
+    var dogEl = document.getElementById("petFact");
 
     imgEl.setAttribute("src",imgUrl);
     dogEl.textContent = dogFact;
-}, 500); 
+}, 500)
+
+
+ 
+
