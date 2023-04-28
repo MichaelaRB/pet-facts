@@ -54,4 +54,8 @@ setTimeout(() => {
 
     imgEl.setAttribute("src",imgUrl);
     dogEl.textContent = dogFact;
-}, 500); 
+}, 500)
+
+
+ 
+
