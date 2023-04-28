@@ -54,4 +54,22 @@ setTimeout(() => {
 
     imgEl.setAttribute("src",imgUrl);
     dogEl.textContent = dogFact;
-}, 500); 
+}, 500)
+
+var factPlaceholder = document.getElementById("dogFact");
+var showFact = document.getElementById("show-fact");
+
+var dogFact = "https://dogapi.dog/api/v2/facts";
+
+var factNumber;
+
+function randomFact(){
+  return dogFacts[factNumber];
+}
+
+showFact.addEventListener('click', function(){
+  factNumber = Math.floor(Math.random()*5);
+  factPlaceholder.textContent = randomFact();
+});
+ 
+
