@@ -1,3 +1,4 @@
+buttonimgs
 .buttons {
     display: flex;
 }
@@ -21,4 +22,39 @@ button:hover {
 #petImg {
     max-height: 100vw;
     border-radius: 10%;
+}
+
+
+body {
+    background-color: rgb(134, 130, 130);
+}
+
+.hero {
+    background-image:  url("E:/repos/projects/pet-facts/images/paw-print.jpg");
+    /*background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+ 
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    
+    /*color: purple;
+    font-size: 80px;
+    -webkit-text-stroke: 2px black;
+    
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    /*color: purple;
+    font-size: 45px;
+    -webkit-text-stroke: 1px black;
+    background-color: white;
+    margin-left: 500px;
+    margin-right: 500px;
 }
