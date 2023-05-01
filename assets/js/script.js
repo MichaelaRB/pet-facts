@@ -36,7 +36,8 @@ setTimeout(() => {
 });
 
 //fetching the dog fact and image
-
+const dogButton = document.getElementById("dogButton");
+dogButton.addEventListener("click", function() {
 fetch(dogImgUrl)
     .then(function (response) {
         return response.json();
@@ -58,7 +59,7 @@ setTimeout(() => {
 
     imgEl.setAttribute("src",imgUrl);
     dogEl.textContent = dogFact;
-}, 500)
+}, 500)});
 
 
  
