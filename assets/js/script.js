@@ -5,7 +5,9 @@ var catImgUrl = "https://shibe.online/api/cats?count=1&urls=true&httpsUrls=false
 var catFact = "";
 var dogFact = "";
 var imgUrl = "";
-
+var catButton = document.getElementById("catbtn");
+console.log(catButton);
+catButton.addEventListener("click", function(){
 //fetching the cat fact and image
 
 fetch(catFactUrl)
@@ -23,6 +25,7 @@ fetch(catImgUrl)
         imgUrl= String(data[0]);
     });
 
+
 setTimeout(() => {
         var imgEl = document.getElementById("petImg");
         var catEl = document.getElementById("petFact");
@@ -30,9 +33,11 @@ setTimeout(() => {
         imgEl.setAttribute("src",imgUrl);
         catEl.textContent = catFact;
     }, 500);
+});
 
 //fetching the dog fact and image
-
+const dogButton = document.getElementById("dogButton");
+dogButton.addEventListener("click", function() {
 fetch(dogImgUrl)
     .then(function (response) {
         return response.json();
@@ -54,4 +59,8 @@ setTimeout(() => {
 
     imgEl.setAttribute("src",imgUrl);
     dogEl.textContent = dogFact;
-}, 500); 
+}, 500)});
+
+
+ 
+
