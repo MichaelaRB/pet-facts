@@ -53,9 +53,6 @@ setTimeout(() => {
     var dogEl = document.getElementById("petFact");
 
     imgEl.setAttribute("src",imgUrl);
+    imgEl.setAttribute("class","is-rounded")
     dogEl.textContent = dogFact;
 }, 500)
-
-
- 
-
