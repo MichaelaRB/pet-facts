@@ -14,7 +14,6 @@ button {
     max-width: 40vw;
     height: auto;
     padding-top: 2vw;
-    filter: rgb(35, 209, 96);
 }
 /*
     From Lewis Donovan https://stackoverflow.com/questions/18815157/how-to-overlay-image-with-color-in-css
@@ -57,4 +56,18 @@ button:hover {
 #pets {
     width: 65vw;
     margin-bottom: 21px;
+}
+
+#pets button {
+    color: white;
+    font-size: 10px;
+    padding-left: 5vw;
+}
+
+#pets button:hover {
+    color: rgb(35, 209, 96);
+}
+
+#saveFact {
+    display: none;
 }
