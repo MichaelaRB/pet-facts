@@ -55,6 +55,7 @@ dogButton.addEventListener("click", function() {
             //do not change the image if the url we get back ends in .mp4, as they cannot display
             var img = imgUrl.split(".");
             if(img[2] !== "mp4") imgEl.setAttribute("src",imgUrl);
+            if(img[2] === "mp4") imgEl.setAttribute("src","./assets/images/fact-display-img.jpg");
             imgEl.setAttribute("style", "display: in-line");
             dogEl.textContent = dogFact;
         });
