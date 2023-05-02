@@ -1,5 +1,5 @@
 # Pet Facts
-An application that allows the user to generate a random image and fact of either a cat or dog.
+An application that allows the user to generate a random image and fact of either a cat or dog as well as save 25 facts they found interesting.
 
 ## User Story
 
