@@ -1,4 +1,7 @@
-buttonimgs
+:root {
+    background-color: rgb(134, 130, 130);
+}
+
 .buttons {
     display: flex;
 }
@@ -10,13 +13,14 @@ button {
     margin-right: 7.5vw;
     max-width: 40vw;
     height: auto;
-    padding-top: 7.5vw;
+    padding-top: 2vw;
+    filter: rgb(35, 209, 96);
 }
 /*
     From Lewis Donovan https://stackoverflow.com/questions/18815157/how-to-overlay-image-with-color-in-css
 */
 button:hover {
-    filter: hue-rotate(100deg);
+    filter: hue-rotate(75deg);
 }
 
 #petImg {
@@ -24,15 +28,33 @@ button:hover {
 }
 
 
-body {
-    background-color: rgb(134, 130, 130);
-}
-
 .hero {
-    background-image:  url("E:/repos/projects/pet-facts/images/paw-print.jpg");
+    background-image: url("../images/paw-print.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
  
+}
+
+.heroTitle {
+    background-color: rgb(242, 240, 240, .95);
+    width: 50vw;
+    height: auto;
+    padding: 1vw;
+}
+
+.subtitle {
+    padding-left: 9vw;
+}
+
+#petImg {
+    width: 100%;
+    padding-left: .8vw;
+    height: auto;
+}
+
+#pets {
+    width: 65vw;
+    margin-bottom: 21px;
 }

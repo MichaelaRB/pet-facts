@@ -16,25 +16,21 @@ fetch(catFactUrl)
     })
     .then(function (data) {
         catFact = data.data[0];
+        fetch(catImgUrl)
+            .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            imgUrl= String(data[0]);
+            var imgEl = document.getElementById("petImg");
+            var catEl = document.getElementById("petFact");
+        
+            imgEl.setAttribute("src",imgUrl);
+            imgEl.setAttribute("style", "display: in-line");
+            catEl.textContent = catFact;
+        });
     });
-fetch(catImgUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        imgUrl= String(data[0]);
-    });
-
-
-setTimeout(() => {
-        var imgEl = document.getElementById("petImg");
-        var catEl = document.getElementById("petFact");
-    
-        imgEl.setAttribute("src",imgUrl);
-        catEl.textContent = catFact;
-    }, 500);
 });
-
 //fetching the dog fact and image
 var dogButton = document.getElementById("dogBtn");
 dogButton.addEventListener("click", function() {
@@ -44,21 +40,19 @@ fetch(dogImgUrl)
     })
     .then(function (data) {
         imgUrl = data.url;
+        fetch(dogFactUrl)
+            .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            dogFact = data.data[0].attributes.body;
+            var imgEl = document.getElementById("petImg");
+            var dogEl = document.getElementById("petFact");
+            
+            imgEl.setAttribute("src",imgUrl);
+            imgEl.setAttribute("style", "display: in-line");
+            dogEl.textContent = dogFact;
+        });
     });
-fetch(dogFactUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        dogFact = data.data[0].attributes.body;
-    });
-
-setTimeout(() => {
-    var imgEl = document.getElementById("petImg");
-    var dogEl = document.getElementById("petFact");
-
-    imgEl.setAttribute("src",imgUrl);
-    imgEl.setAttribute("class","is-rounded")
-    dogEl.textContent = dogFact;
-}, 500)});
+});
 

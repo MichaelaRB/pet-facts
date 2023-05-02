@@ -11,27 +11,31 @@
 <body>
     <section class="hero is-small is-dark">
         <div class="hero-body">
-          <p class="title has-text-success is-size-1">
-            Pet Enthusiasts
-          </p>
-          <p class="subtitle has-text-success is-size-3">
-            Choose a pet, Learn a fact!
-          </p>
+          <section class="heroTitle">
+            <p class="title has-text-success is-size-1 is-size-4-mobile">
+              Pet Enthusiasts
+            </p>
+            <p class="subtitle has-text-success is-size-5 is-size-7-mobile">
+              Choose a pet, Learn a fact!
+            </p>
+          </section>
         </div>
       </section>
       <br>
       <div id="pets" class="container is-flex is-align-items-center is-justify-content-center">
         <div class="notification is-dark">
-          <img id="petImg" src="" alt="Random picture of a pet">
+          <img id="petImg" src="https://placehold.co/200/363636/363636" alt="A cute picture of a dog!">
           <br>
-          <p id="petFact" class="size-4 weight-medium"></p>
+          <p id="petFact" class="is-size-4 is-size-6-mobile">Click below to generate a pet fact!</p>
         </div>
       </div>
-    
-    <button id="catBtn">
-        <img src="./assets/images/Cat Button.png"> </button>
-    <button id="dogBtn">
-        <img src="./assets/images/Dog Button.png"></button>
+    <section id="buttons" class="container is-flex is-align-items-center is-justify-content-center">
+      <button id="catBtn">
+      <img src="./assets/images/Cat Button.png"> </button>
+      <button id="dogBtn">
+      <img src="./assets/images/Dog Button.png"></button>
+    </section>
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
