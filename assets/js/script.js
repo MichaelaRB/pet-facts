@@ -70,7 +70,7 @@ saveButton.addEventListener("click", function(){
     if(localStorage.getItem("facts") !== null) factArray = JSON.parse(localStorage.getItem("facts"));
     
     factArray.unshift(fact);
-    if(factArray.length = 11) factArray.pop();
+    if(factArray.length = 26) factArray.pop();
     localStorage.setItem("facts",JSON.stringify(factArray));
 });
 1
