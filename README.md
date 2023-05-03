@@ -22,11 +22,10 @@ HTML, CSS, Java
  Cat Images link: https://shibe.online/
  
  #  Images 
-After pressing the cat button, the sight will display a corresponding image and fact like so:
 ![Screenshot (27)](https://user-images.githubusercontent.com/126620642/235816537-cb607388-2721-4ee8-a77f-5949edad1eb2.png)
 
-A random dog image and fact displayed after clicking the dog button.
+
 ![Screenshot (28)](https://user-images.githubusercontent.com/126620642/235816600-fdc759a1-9759-4f21-b90e-3d5340245d0c.png)
 
-The list of facts that have been saved.
+
 ![Screenshot (29)](https://user-images.githubusercontent.com/126620642/235816650-5a8b7bb5-096b-4c15-b627-ae5f06504285.png)
