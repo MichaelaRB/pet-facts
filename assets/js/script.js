@@ -92,6 +92,8 @@ displayButton.addEventListener("click", function(){
     factList.innerHTML = "";
     imgEl.setAttribute("src","./assets/images/fact-display-img.jpg");
 
+    saveButton.setAttribute("style","display:none");
+    
     var factEl = document.getElementById("petFact");
     factEl.textContent = "";
 
