@@ -8,6 +8,13 @@ var imgUrl = "";
 var catButton = document.getElementById("catBtn");
 var factList = document.getElementById("savedFacts"); 
 var saveButton = document.getElementById("saveFact");
+var recommendList = document.getElementById("recommendations");
+var recommendedAnimals = [];
+var recEL = document.getElementById("recInput");
+var recTitle = document.getElementById("recTitle");
+
+recommendList.innerHTML = "";
+renderRecs();
 
 catButton.addEventListener("click", function(){
 //fetching the cat fact and image
@@ -97,3 +104,30 @@ displayButton.addEventListener("click", function(){
         fact.setAttribute("style", "font-size: 15px; margin-bottom: 7px; padding-left: 5px;");
     }
 });
+
+
+recEL.addEventListener("keyup", function(event)
+{
+    if (event.keyCode !== 13) return;
+    recommendList.innerHTML = "";
+    renderRecs();
+});
+
+function renderRecs() {
+    var recommendation = recEL.value;
+    recEL.value = "";
+    
+    if(localStorage.getItem("recommendations") !== null) recommendedAnimals = JSON.parse(localStorage.getItem("recommendations"));
+    recommendedAnimals.unshift(recommendation);
+    if(recommendedAnimals.length === 11) recommendedAnimals.pop();
+    localStorage.setItem("recommendations",JSON.stringify(recommendedAnimals));
+
+    recTitle.innerHTML = "Recommended animals for the future:";
+
+    for(var i = 0; i<recommendedAnimals.length; i++) {
+        var rec = document.createElement("li");
+        rec.textContent = recommendedAnimals[i];
+        recommendList.appendChild(rec);
+        rec.setAttribute("style", "font-size: 15px; margin-bottom: 7px; padding-left: 5px;");
+    }
+}
