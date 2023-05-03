@@ -73,6 +73,6 @@ button:hover {
     display: none;
 }
 
-input {
-    width: 50%;
+#recInput {
+    width: 75%;
 }
