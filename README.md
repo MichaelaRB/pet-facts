@@ -12,6 +12,8 @@ This website is for all the pet lovers out in the world! It lets you see cute fu
 
 There are two buttons that will display either facts about cats or dogs, respectively. There are two other buttons, a display facts button and a save facts button. The user can save up to 25 total facts and display them at any given time.
 
+At the bottom of the page, there is an input where the user can suggest future animals to include on the site. The recommendations will be displayed below the input.
+
 # Made with
 HTML, CSS, Java
 
@@ -29,3 +31,5 @@ HTML, CSS, Java
 
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/126620642/235816650-5a8b7bb5-096b-4c15-b627-ae5f06504285.png)
+
+![Screenshot (30)](https://user-images.githubusercontent.com/126620642/235821166-6bdedc57-1df2-4fd1-8c9d-a127a9d1d521.png)
